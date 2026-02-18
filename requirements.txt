@@ -1,0 +1,7 @@
+pillow
+numpy
+matplotlib
+imageio
+scikit-image
+scikit-fuzzy
+cv2
