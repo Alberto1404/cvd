@@ -30,4 +30,12 @@ class ColourBlindnessSimulation(ABC):
 
     @abstractmethod # TODO: strategy pattern
     def simulate(self, image: np.ndarray) -> np.ndarray:
+        """
+        Abstract method to simulate colour blindness on an input image. Must be implemented by subclasses.
+
+        :param image: Input image as a numpy array.
+        :type image: np.ndarray
+        :return: Simulated image as a numpy array.
+        :rtype: np.ndarray
+        """
         raise NotImplementedError()
