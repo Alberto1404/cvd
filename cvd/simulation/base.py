@@ -28,7 +28,7 @@ class ColourBlindnessSimulation(ABC):
     def get_colour_space(self):
         return self._colour_space
 
-    @abstractmethod # TODO: strategy pattern
+    @abstractmethod
     def simulate(self, image: np.ndarray) -> np.ndarray:
         """
         Abstract method to simulate colour blindness on an input image. Must be implemented by subclasses.
