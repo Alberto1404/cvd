@@ -13,7 +13,7 @@ class SimulationFactory:
     }
 
     @staticmethod
-    def create_simulation(author: SimulationAuthors, colour_deficiency: ColourVisionDeficiencies) -> ColourBlindnessSimulation:
+    def define_simulator(author: SimulationAuthors, colour_deficiency: ColourVisionDeficiencies) -> ColourBlindnessSimulation:
         if author not in SimulationFactory.__SIMULATION_CLASSES:
             raise NotImplementedError(f"Unsupported simulation author: {author}")
 
