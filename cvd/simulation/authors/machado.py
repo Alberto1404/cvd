@@ -23,7 +23,7 @@ class MachadoSimulation(ColourBlindnessSimulation):
         if colour_deficiency not in self.__DEFICIENCY_MATRICES:
             raise NotImplementedError(f"Unsupported colour deficiency: {colour_deficiency}")
 
-        super().__init__(author=SimulationAuthors.MELILLO, colour_deficiency=colour_deficiency, colour_space=ColourSpaces.RGB)
+        super().__init__(author=SimulationAuthors.MACHADO, colour_deficiency=colour_deficiency, colour_space=ColourSpaces.RGB)
 
     def simulate(self, image: np.ndarray) -> np.ndarray:
         pixels = image.reshape(-1, 3)
