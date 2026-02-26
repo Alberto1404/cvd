@@ -39,5 +39,6 @@ class MelilloSimulation(ColourBlindnessSimulation):
         pixels = image.reshape(-1, 3)
         simulated_pixels = np.dot(pixels, c.T)
         simulated_image = simulated_pixels.reshape(image.shape)
-        
+
         return simulated_image
+
