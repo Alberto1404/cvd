@@ -25,11 +25,5 @@ class MachadoSimulation(ColourBlindnessSimulation):
 
         super().__init__(author=SimulationAuthors.MACHADO, colour_deficiency=colour_deficiency, colour_space=ColourSpaces.RGB)
 
-    def simulate(self, image: np.ndarray) -> np.ndarray:
-        matrix = self.__DEFICIENCY_MATRICES[self.get_colour_deficiency()]
-
-        pixels = image.reshape(-1, 3)
-        simulated_pixels = np.dot(pixels, matrix.T)
-        simulated_image = simulated_pixels.reshape(image.shape)
-
-        return simulated_image
+    def _get_deficiency_matrix(self) -> np.ndarray:
+        return self.__DEFICIENCY_MATRICES[self._colour_deficiency]
